@@ -7,12 +7,41 @@
   font-family: 'Roboto Mono', monospace;
 }
 
-.home, .about, .projects, .experience {
+.about, .projects, .experience {
   display: flex;
   height: 90vh;
   align-items:center;
   justify-content: center;
   font-size: 3rem;
 }
+
+.introduction {
+  font-size: 2rem;
+  text-align: center;
+  padding-left: 100px;
+} 
+
+.learnmore {
+  top: 2px;
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.aboutme {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-right: 80px;
+} 
+
+.imageofme {
+  padding-left: 80px;
+  padding-right: 30px;
+}
+
+
+
+
+
+
 
 

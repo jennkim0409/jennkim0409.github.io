@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {SidebarData} from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
+import { View } from 'react-native-web';
 
 function Navbar() {
     const [sidebar, setSidebar] = useState(false);
@@ -12,11 +13,17 @@ function Navbar() {
 
     return (
       <>
+      <View
+        style={{
+            position: 'relative',
+            zIndex: 10,
+        }}>
       <IconContext.Provider value={{color: '#f6e0e0'}}>
         <div className="navbar">
             <Link to='#' className='menu-bars'>
                 <BiIcons.BiListUl onClick={showSidebar}/> 
             </Link>
+            
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
             <ul className='nav-menu-items' onClick={showSidebar}>
@@ -37,7 +44,8 @@ function Navbar() {
                 })}
             </ul>
         </nav>
-        </IconContext.Provider>          
+        </IconContext.Provider>      
+        </View>    
       </>
     )
 }
